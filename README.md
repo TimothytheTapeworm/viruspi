@@ -1,10 +1,7 @@
 # viruspi
 
-some viruses i made for use on my raspberry pi
-feel free to use this for EDUCATIONAL PURPOSES
-i am not responsible for any damage caused
-use this at your own risk
+WARNING: EDUCATIONAL PURPOSES ONLY
 
+Install trojanhorse.py only, the other files will be installed by it
 
-#usage
-better used in the command line
+I AM NOT RESPONSIBLE FOR ANY DAMAGE CAUSED

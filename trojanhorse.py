@@ -22,10 +22,10 @@ time.sleep(2)
 cmd3 = 'sudo mv /home/pi/Desktop/viruspi/poliovirus.py /home/pi/Desktop/poliovirus.py'
 os.system(cmd3)
 
-cmd4 = 'sudo mv /home/pi/Desktop/viruspi/reaper.py /home/pi/Desktop/reaper.py
+cmd4 = 'sudo mv /home/pi/Desktop/viruspi/reaper.py /home/pi/Desktop/reaper.py'
 os.system(cmd4)
 
-cmd5 = 'sudo mv /home/pi/Desktop/viruspi/reaperdecryptor.py /home/pi/Desktop/reaperdecryptor.py
+cmd5 = 'sudo mv /home/pi/Desktop/viruspi/reaperdecryptor.py /home/pi/Desktop/reaperdecryptor.py'
 os.system(cmd5)
 
 print('Almost there!')

